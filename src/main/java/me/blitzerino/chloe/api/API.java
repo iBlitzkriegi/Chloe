@@ -21,7 +21,7 @@ import static me.blitzerino.chloe.Chloe.s;
  * Created by Blitz on 8/5/2016.
  */
 public class API{
-    private String cmdStart = ".cht";
+    private String cmdStart = ".ch";
     private String msgStart = "Ӝ ";
     private String name = "Chloe";
     private String adminmsg = "You are not a admin therefore you may not execute this command!";
