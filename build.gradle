@@ -1,0 +1,34 @@
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'net.dv8tion:JDA:2.2.0_334'
+    compile 'net.dv8tion:jda-player:0.2.2_22'
+    compile 'ca.pjer:chatter-bot-api:1.4.2'
+    compile 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:1.1.2'
+
+}
+mainClassName = 'me.blitzerino.chloe.Chloe'
+compileJava.options.encoding = 'UTF-8'
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14'
+}
+jar {
+    manifest {
+        attributes "Main-Class": "me.blitzerino.chloe.Chloe"
+    }
+}
+shadowJar{
+    archiveName = "Chloe.${extension}"
+}
